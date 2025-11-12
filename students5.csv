@@ -1,0 +1,51 @@
+[
+  {
+    "Nombre": "Ana",
+    "Apellido": "Martinez",
+    "Grupo": "A1",
+    "PuntosExtra": "3",
+  },
+  {
+    "Nombre": "Luis",
+    "Apellido": "Garcia",
+    "Grupo": "A2",
+    "PuntosExtra": "1",
+  },
+  {
+    "Nombre": "Carlos",
+    "Apellido": "Ramirez",
+    "Grupo": "B1",
+    "PuntosExtra": "2",
+  },
+  {
+    "Nombre": "Lucia",
+    "Apellido": "Suarez",
+    "Grupo": "A1",
+    "PuntosExtra": "0",
+  },
+  {
+    "Nombre": "Juan",
+    "Apellido": "Perez",
+    "Grupo": "B2",
+    "PuntosExtra": "4",
+  },
+  {
+    "Nombre": "Martha",
+    "Apellido": "Gomez",
+    "Grupo": "B1",
+    "PuntosExtra": "2",
+  },
+  {
+    "Nombre": "Jose",
+    "Apellido": "Gomez",
+    "Grupo": "B3",
+    "PuntosExtra": "2",
+  },
+  {
+    "Nombre": "Julia",
+    "Apellido": "Lopez",
+    "Grupo": "A2",
+    "PuntosExtra": "1",
+  }
+
+]
