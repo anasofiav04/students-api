@@ -9,27 +9,23 @@ app.use(cors());
 const PORT = process.env.PORT || 10000;
 let students = [];
 
-// Leer el archivo CSV al iniciar el servidor
 fs.createReadStream("students5.csv")
   .pipe(csv())
   .on("data", (row) => {
     students.push(row);
   })
   .on("end", () => {
-    console.log("Archivo CSV cargado correctamente ✅");
+    console.log("Archivo CSV cargado correctamente ");
   });
 
-// Ruta principal
 app.get("/", (req, res) => {
-  res.send("API de Estudiantes funcionando correctamente 📚");
+  res.send("API funcionando correctamente");
 });
 
-// Obtener todos los estudiantes
 app.get("/students", (req, res) => {
   res.json(students);
 });
 
-// Buscar estudiante por ID (asumiendo que el CSV tiene una columna 'id')
 app.get("/students/:id", (req, res) => {
   const id = req.params.id;
   const student = students.find((s) => s.id == id);
@@ -40,11 +36,9 @@ app.get("/students/:id", (req, res) => {
   }
 });
 
-// Buscar estudiante por nombre (si el CSV tiene una columna 'name' o similar)
 app.get("/search", (req, res) => {
   const name = req.query.name?.toLowerCase();
-  if (!name)
-    return res.status(400).json({ message: "Falta el parámetro 'name'" });
+  if (!name) return res.status(400).json({ message: "Falta el nombre" });
 
   const results = students.filter((s) =>
     Object.values(s).some((val) => val.toLowerCase().includes(name))
@@ -53,7 +47,6 @@ app.get("/search", (req, res) => {
   res.json(results);
 });
 
-// Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+  console.log(`Servidor en el puerto ${PORT}`);
 });
